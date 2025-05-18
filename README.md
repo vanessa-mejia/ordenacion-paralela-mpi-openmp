@@ -21,3 +21,21 @@ Se analizan los resultados en distintos niveles de carga y núcleos, evaluando *
 - `Gráficas_Proyecto_Final_Programación_Paralela.ipynb` → Notebook con gráficas de speedup comparativo entre OpenMP y MPI (realizado con Python).
 - `Documento Final Proyecto - Programación Paralela.pdf` → Informe final con análisis, tablas y resultados.
 
+
+## Requisitos
+
+- Compilador C++ (g++)
+- Soporte para OpenMP (`-fopenmp`)
+- Biblioteca MPI instalada (`mpic++`, `mpiexec`)
+- Python (opcional, para graficar)
+
+Para compilar cada versión del programa, sigue los pasos a continuación desde la terminal:
+
+Para la versión secuencial, se debe ejecutar:
+g++ -o mergesort_secuencial mergesort_secuencial.cpp
+
+Para la versión con OpenMP, se debe ejecutar:
+g++ -fopenmp -o mergesort_openmp mergesort_openmp.cpp
+
+Para la versión con MPI, se debe ejecutar:
+mpic++ -o mergesort_mpi mergesort_mpi.cpp
